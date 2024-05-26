@@ -13,6 +13,9 @@ $padding-default: 15px;
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
 body {
   background-color: $bg-color;
 }
@@ -25,10 +28,46 @@ section {
 }
 
 .left-sidebar {
-  padding: $padding-default;
+  color: $bg-color;
   background-color: $bg-color-accent;
   width: 30vw;
   height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .photo {
+    padding: $padding-default;
+    background-color: #ffffff;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+  }
+
+  .name-surname {
+    text-transform: uppercase;
+    padding-top: $padding-default;
+    font-size: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+  }
+  .position{
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    padding-bottom: $padding-default;
+  }
+  .personal-data-link {
+    text-align: center;
+
+    padding-bottom: 1rem;
+    a:link, a:visited {
+      color: $bg-color;
+      font-size: 1.1rem;
+    }
+  }
 }
 
 .right-sidebar {
@@ -36,6 +75,9 @@ section {
   background-color: #fff;
   width: 70vw;
   height: 100%;
+  .experiences {
+    padding: $padding-default;
+  }
 }
 
 @media screen and (max-width: 768px) {
