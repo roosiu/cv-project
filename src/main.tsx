@@ -19,7 +19,17 @@ const personalData: interfaceData  = {
     email: "roosiu@gmail.com",
     phone: "+48 723 920 567",
     links: [{linkedin: "https://linkedin.com/in/piotr-rosiak-roosiu/"}, {website: "https://piotrrosiak.pl/"}],
-    experience: [{description: "AGENCJA ARTYSTYCZNO-REKLAMOWA DEJAVU-ART. - GRAFIK KOMPUTEROWY / WEBDESIGNER", year: "2016"}]
+    experience: [
+        {description: "AGENCJA ARTYSTYCZNO-REKLAMOWA DEJAVU-ART. - GRAFIK KOMPUTEROWY / WEBDESIGNER", year: "12.2010 - 03.2011"},
+        {description: "KANCELARIA KOMORNICZA - PRACOWNIK ADMINISTRACYJNO-BIUROWY", year: "06.2011 - 01.2018"},
+        {description: "2R COMPANY PIOTR ROSIAK - WŁASNA DZIAŁALNOŚĆ GOSPODARCZA", year: "04.2014 – 01.2022"},
+        {description: "KUJAWSKA SPÓŁDZIELNIA MIESZKANIOWA W INOWROCŁAWIU - ADMINISTRATOR -> KIEROWNIK OSIEDLA", year: "02.2018 – DO DZIŚ"}
+    ],
+    education: [
+        {description:"Wyższa Szkoła Gospodarki w Bydgoszczy kierunek zarządzanie: zarządzanie zasobami ludzkimi – studia I stopnia", year:"2008 - 2011"},
+        {description: "Wyższa Szkoła Gospodarki w Bydgoszczy kierunek ekonomia: gospodarowanie i administracja publiczna – studia II stopnia", year: "2011 – 2013"},
+        {description: "Wyższa Szkoła Bankowa w Toruniu kierunek Programista Front-End – studia podyplomowe (w trakcie)", year:"2023 - 2024"}
+    ]
 }
 
 
@@ -73,12 +83,25 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <div className="right-sidebar">
               <div className="experience">
                   <h3>Experience</h3>
+                  <ul>
                   { personalData.experience && personalData.experience.map((item, index) => (
-                      <div key={index}>
+                      <li key={index}>
                           <p>{item.description}</p>
                           <p>{item.year}</p>
-                      </div>
+                      </li>
                   )) }
+                  </ul>
+              </div>
+              <div className="education">
+                  <h3>Education</h3>
+                  <ul>
+                  { personalData.education && personalData.education.map((item, index) => (
+                      <li key={index}>
+                          <p>{item.description}</p>
+                          <p>{item.year}</p>
+                      </li>
+                  )) }
+                  </ul>
               </div>
           </div>
       </section>

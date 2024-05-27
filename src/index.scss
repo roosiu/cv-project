@@ -75,11 +75,31 @@ section {
   background-color: #fff;
   width: 70vw;
   height: 100%;
-  .experiences {
+  h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: $bg-color-accent;
+    letter-spacing: 3px;
+    border-bottom: 2px solid $bg-color-accent;
+  }
+  .experience {
+    padding: $padding-default;
+  }
+  .education {
     padding: $padding-default;
   }
 }
-
+ul {
+  list-style-type: square;
+  padding: $padding-default*1.5;
+  li {
+    padding: 5px;
+    p:first-child {
+      font-weight: bold;
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   section {
     flex-direction: column;
